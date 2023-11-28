@@ -10,6 +10,7 @@ import 'cart_screen.dart';
 import 'favorite_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+
   const HomeScreen({super.key});
 
   static const route = 'Home_Screen';

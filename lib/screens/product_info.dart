@@ -6,6 +6,7 @@ import '../models/product.dart';
 import '../models/provider/favorite_provider/favorite_Provider.dart';
 import '../models/provider/favorite_provider/favorite_item.dart';
 
+
 class ProductInfo extends StatefulWidget {
   final Product product;
 

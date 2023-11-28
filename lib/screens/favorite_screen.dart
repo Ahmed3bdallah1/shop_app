@@ -7,6 +7,7 @@ import '../models/provider/favorite_provider/favorite_Provider.dart';
 import 'home_screen.dart';
 import 'cart_screen.dart';
 
+
 class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({super.key});
 

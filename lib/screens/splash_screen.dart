@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import '../models/auth/auth_check.dart';
 
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 

@@ -75,6 +75,7 @@ flutter:
 
   assets:
     - assets/images/
+
     - assets/lottie/
   #   - images/a_dot_ham.jpeg
 
