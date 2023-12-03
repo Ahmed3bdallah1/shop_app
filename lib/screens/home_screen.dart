@@ -18,7 +18,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.black,
       appBar: AppBar(
         shadowColor: Colors.grey,
         centerTitle: true,
@@ -27,7 +26,6 @@ class HomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              // context.read<UserProvider>().logout();
               showDialog(
                   context: context,
                   builder: (context) {
@@ -43,11 +41,7 @@ class HomeScreen extends StatelessWidget {
                         CupertinoDialogAction(
                             onPressed: () {
                               FirebaseAuthService().logout();
-                              // context.read<UserProvider>().logout();
                               Navigator.of(context).pop();
-                              // Future.delayed(Duration.zero).then((value) =>
-                              //     Navigator.pushReplacementNamed(
-                              //         context, LoginScreen.route));
                             },
                             child: const Text('Ok')),
                       ],
@@ -102,12 +96,8 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const SizedBox(height: 10,),
-          // const Text(
-          //   'Categories',
-          //   style: TextStyle(fontStyle: FontStyle.italic, fontSize: 15),
-          // ),
-          Container(
+          const SizedBox(height: 10),
+          SizedBox(
             height: 80,
             child: ListView(scrollDirection: Axis.horizontal, children: [
               Column(

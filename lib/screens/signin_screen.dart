@@ -59,7 +59,6 @@ class _SignInScreenState extends State<SignInScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: constants.primarySecondColor.withOpacity(.1),
@@ -99,58 +98,51 @@ class _SignInScreenState extends State<SignInScreen> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: TextFormField(
-                        controller: _emailController,
-                        decoration: InputDecoration(
-                            labelText: "email",
-                            filled: true,
-                            fillColor: Colors.white.withOpacity(.5),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            )),
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'Please enter an email';
-                          }
-                          return null;
-                        },
-                      ),
-                    ),
+                        padding: const EdgeInsets.all(10.0),
+                        child: TextFormField(
+                            controller: _emailController,
+                            decoration: InputDecoration(
+                                labelText: "email",
+                                filled: true,
+                                fillColor: Colors.white.withOpacity(.5),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                )),
+                            validator: (value) {
+                              if (value!.isEmpty) {
+                                return 'Please enter an email';
+                              }
+                              return null;
+                            })),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: TextFormField(
-                        controller: _passwordController,
-                        decoration: InputDecoration(
-                            labelText: "password",
-                            filled: true,
-                            fillColor: Colors.white.withOpacity(.5),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            )),
-                        obscureText: true,
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'Please enter a password';
-                          }
-                          return null;
-                        },
-                      ),
-                    ),
+                        padding: const EdgeInsets.all(10.0),
+                        child: TextFormField(
+                            controller: _passwordController,
+                            decoration: InputDecoration(
+                                labelText: "password",
+                                filled: true,
+                                fillColor: Colors.white.withOpacity(.5),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                )),
+                            obscureText: true,
+                            validator: (value) {
+                              if (value!.isEmpty) {
+                                return 'Please enter a password';
+                              }
+                              return null;
+                            })),
                     TextButton(
-                      onPressed: () {
-                        if (_formKey.currentState!.validate()) {
-                          _signInUser();
-                        }
-                      },
-                      child: const Text('Sign In'),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text("you don't have an account? ",
-                            style: TextStyle(color: Colors.white)),
-                        GestureDetector(
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {
+                            _signInUser();
+                          }
+                        },
+                        child: const Text('Sign In')),
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                      const Text("you don't have an account? ",
+                          style: TextStyle(color: Colors.white)),
+                      GestureDetector(
                           onTap: () {
                             Navigator.pushReplacement(
                                 context,
@@ -160,10 +152,8 @@ class _SignInScreenState extends State<SignInScreen> {
                           child: const Text("Register",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.blueGrey)),
-                        )
-                      ],
-                    )
+                                  color: Colors.blueGrey)))
+                    ])
                   ],
                 ),
               ),

@@ -34,7 +34,7 @@ class FirebaseAuthService {
   }
 
   Future<UserCredential> registerWithEmailPassword(
-      String email, String password, String userName, String phone) async {
+      String email, String password, String userName, String phone) async{
     try {
       UserCredential userCredential = await _auth
           .createUserWithEmailAndPassword(email: email, password: password);
@@ -50,5 +50,11 @@ class FirebaseAuthService {
       print('Registration failed: ${e.message}');
       throw e;
     }
+  }
+
+
+  Stream<DocumentSnapshot> getUserInfo() {
+    var uid = currentUser.uid;
+    return firestore.collection("users").doc(uid).snapshots();
   }
 }
